@@ -2,9 +2,9 @@
   "name": "subscriptions",
   "version": "1.0.0",
   "description": "backend project for subscription management",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "tsx watch src/main/server.ts",
     "build": "tsc",
     "lint": "eslint src"
   },

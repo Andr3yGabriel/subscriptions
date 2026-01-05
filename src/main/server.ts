@@ -8,10 +8,15 @@ app.get("/health", async () => {
   return { status: "ok" };
 });
 
-app.listen({ port: PORT }, (err, address) => {
-  if (err) {
-    console.error(err);
+const startServer = async () => {
+  try {
+    app.listen({ port: PORT, host: "0.0.0.0" }, () => {
+      console.log(`Server listening at http://localhost:${PORT}`);
+    });
+  } catch (err) {
+    console.error("Error starting server:", err);
     process.exit(1);
   }
-  console.log(`Server listening at ${address}`);
-});
+};
+
+startServer();
