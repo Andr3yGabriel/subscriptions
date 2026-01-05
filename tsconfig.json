@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    /* Configurações Básicas */
+    "target": "es2022" /* Versão do JS gerado */,
+    "module": "nodenext" /* Padrão de módulos do Node.js */,
+    "moduleResolution": "nodenext" /* Como resolver módulos */,
+    "rootDir": "./src" /* Onde está seu código fonte */,
+    "outDir": "./dist" /* Onde ficará o código compilado */,
+    "esModuleInterop": true /* Facilita importação de libs antigas */,
+    "forceConsistentCasingInFileNames": true /* Evita erros com letras maiúsculas/minúsculas */,
+
+    /* Strict Mode (Obrigatório para robustez) */
+    "strict": true /* Ativa todas as checagens estritas */,
+    "noImplicitAny": true /* Reclama se você não tipar algo */,
+    "skipLibCheck": true /* Pula checagem de tipos em libs de terceiros (mais rápido) */,
+
+    /* Path Aliases (Para Clean Architecture) */
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
